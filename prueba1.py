@@ -1,8 +1,8 @@
 print("what is your elo in lol?")
-elo_str = input("Ingrese su elo en lol y presione Enter: ")
+elo = input("Ingrese su elo en lol y presione Enter: ")
 
 try:
-    elo = float(elo_str)
+    elo = float(elo)
 except ValueError:
     print("Por favor ingrese un valor válido")
 else:
@@ -14,10 +14,8 @@ else:
         print("Tu elo es medio")
     else:
         print("Tu elo es alto")
-while True:
-    if elo.isdigit():
-        numero= int(elo)
-        break
+    if elo.is_integer():
+        numero = int(elo)
     else:
         print("error: Por favor ingrese un valor válido")
 print("Gracias por usar el programa")                    
